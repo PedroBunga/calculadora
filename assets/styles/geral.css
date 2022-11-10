@@ -3,7 +3,7 @@
   text-decoration: none;
   box-sizing: border-box;
   color: rgb(255, 255, 255);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 body {
@@ -11,10 +11,40 @@ body {
   width: 100vw;
   display: flex;
   align-items: center;
+  gap: 80px;
+  align-items: center;
   justify-content: center;
-  align-content: center;
   overflow: hidden;
   background-color: rgb(13, 14, 15);
+}
+
+.informacao-inicial {
+  width: 360px;
+  height: 492px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  color: rgb(237, 237, 237);
+}
+.informacao-inicial p{
+  text-align: justify;
+}
+.informacao-inicial .botoes a{
+  height: 40px;
+  border-radius: 5px;
+  font-size: small;
+  background-color:#7F18ED;
+  text-align: center;
+  padding: 10px;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+
+/*Estilizando o Scrol Geral que aparecer na Pagina*/
+::-webkit-scrollbar {
+  background-color: rgb(30, 31, 34);
 }
 
 .main-content {
@@ -58,6 +88,13 @@ body {
   font-display: flex;
   border-radius: 10px;
   align-items: flex-end;
+  /*Caso o numero de Caracter Superar o Tamanho do Container
+    As palavras vão ser quebradas para proxima linha
+  */
+
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  overflow-y: scroll;
 }
 
 .main-content .calculadora .calculadora-display .resultado span {
@@ -80,8 +117,8 @@ body {
   font-weight: 900;
 }
 
-.main-content .calculadora .calculadora-display input:focus{
-    color: rgb(237, 237, 237);
+.main-content .calculadora .calculadora-display input:focus {
+  color: rgb(237, 237, 237);
 }
 
 /*Eliminando as setas do input*/
@@ -132,8 +169,8 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: rgb(40, 42, 45);
   border-radius: 7px;
 }
-.main-content .calculadora .calculadora-main .digitos #zerozero:hover{
-    background-color: rgb(237, 237, 237);
+.main-content .calculadora .calculadora-main .digitos #zerozero:hover {
+  background-color: rgb(237, 237, 237);
   color: rgb(13, 17, 23);
   border-radius: 7px;
 }
