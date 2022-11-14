@@ -4,6 +4,7 @@
   box-sizing: border-box;
   color: rgb(255, 255, 255);
   font-family: "Courier New", Courier, monospace;
+  cursor: default;
 }
 
 body {
@@ -54,10 +55,9 @@ body {
   align-items: center;
   width: 380px;
   height: 512px;
-  border-style: solid;
-  border-color: rgb(13, 17, 23);
   background-color: rgb(40, 42, 45);
   border-radius: 13px;
+  box-shadow: 18px 17px 30px -6px rgba(147,54,245,0.5);
 }
 
 .main-content .calculadora {
@@ -67,6 +67,7 @@ body {
   flex-direction: column;
   width: 360px;
   height: 492px;
+
 }
 
 .main-content .calculadora .calculadora-display {
@@ -115,11 +116,13 @@ body {
   color: rgb(94, 97, 102);
   font-size: large;
   font-weight: 900;
+  cursor: text;
 }
 
 .main-content .calculadora .calculadora-display input:focus {
   color: rgb(237, 237, 237);
 }
+
 
 /*Eliminando as setas do input*/
 input[type="number"]::-webkit-inner-spin-button,
@@ -191,6 +194,7 @@ input[type="number"]::-webkit-outer-spin-button {
   align-self: center;
   justify-content: center;
 }
+
 
 .main-content .calculadora .calculadora-main .operacoes a {
   display: flex;

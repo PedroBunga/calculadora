@@ -1,6 +1,6 @@
 # SIMPLES CALCULADORA
 
-Este Projecto Tem como Objectivo implementar as operações basicas de uma calculadora (Adição , Subtração, Multiplicação, Divisão,Potencia e Raiz Quadrada)
+Este Projecto Tem como Objectivo implementar as operações basicas de uma calculadora (Adição , Subtração, Multiplicação, Divisão,Potencia e Raiz Quadrada), Para uma calculadora versão web.
 
 ## FUNCIONALIDADES
 

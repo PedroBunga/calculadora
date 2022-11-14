@@ -1,3 +1,4 @@
+
 function setResultValue() {
   if (document.getElementById("entrada").value != null) {
     document.getElementById("result").innerHTML =
@@ -12,3 +13,4 @@ function clearScrean() {
     "entrada"
   ).value = "";
 }
+
