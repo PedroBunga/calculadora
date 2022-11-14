@@ -1,6 +1,7 @@
 /*Estas Funções Servem para Capturar o Valor Presionado na Calculadora e concatenar ao Input existente 
   Isto se aplica tambem as operações*/
 function isEmpty() {
+
   if (
     document.getElementById("entrada").value === "Insere Os Valores" ||
     document.getElementById("entrada").value === ""
@@ -11,7 +12,7 @@ function isEmpty() {
 }
 
 function clicou_1() {
-  if (document.getElementById("entrada").value === isEmpty()) {
+  if (document.getElementById("entrada") === isEmpty()) {
     return (document.getElementById("entrada").value = "1");
   }
   return (document.getElementById("entrada").value += "1");
@@ -123,18 +124,19 @@ function whatOperation(expressao) {
 }
 
 function resultado() {
-  let resultado_Final =0;
+  var resultado_Final = 0;
   let valo_Digitado = document.getElementById("entrada").value;
   let valorAtual = valo_Digitado.split(`{whatOperation(valo_Digitado)}`);
 
   if (whatOperation(valo_Digitado) === "+") {
-    resultado_Final = parseInt(valorAtual[0]) + parseInt(valorAtual[1]);
-
+    resultado_Final = parseInt(valorAtual[0], 10) + parseInt(valorAtual[1], 10);
+    console.log(parseInt(valorAtual[0]) + parseInt(valorAtual[1]));
   }
 
   if (isEmpty()) {
     return (document.getElementById("entrada").value = "Entrada Invalida!");
   }
 
-  return (document.getElementById("result").innerHTML = valorAtual);
+  return (document.getElementById("result").innerHTML =
+    parseInt(resultado_Final));
 }
