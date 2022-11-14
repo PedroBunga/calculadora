@@ -28,33 +28,33 @@
             <div class="calculadora-display">
                 <div class="resultado"><span id="result"></span></div>
                 <div class="entrada">
-                    <input value="Insere Os Valores Aqui" type="text" name="entrada" id="entrada">
+                    <input value="Insere Os Valores" type="text" name="entrada" id="entrada">
                 </div>
             </div>
 
             <div class="calculadora-main">
-                <div class="digitos">
-                    <a class="numero um">1</a>
-                    <a class="numero dois">2</a>
-                    <a class="numero tres">3</a>
-                    <a class="numero quatro">4</a>
-                    <a class="numero cinco">5</a>
-                    <a class="numero seis">6</a>
-                    <a class="numero sete">7</a>
-                    <a class="numero oito">8</a>
-                    <a class="numero nove">9</a>
-                    <a class="numero zero">0</a>
-                    <a id="zerozero" class="numero zerozero">0 0</a>
+                <div  class="digitos">
+                    <a onclick="clicou_1()" class="numero um">1</a>
+                    <a onclick="clicou_2()" class="numero dois">2</a>
+                    <a onclick="clicou_3()" class="numero tres">3</a>
+                    <a onclick="clicou_4()" class="numero quatro">4</a>
+                    <a onclick="clicou_5()" class="numero cinco">5</a>
+                    <a onclick="clicou_6()" class="numero seis">6</a>
+                    <a onclick="clicou_7()" class="numero sete">7</a>
+                    <a onclick="clicou_8()" class="numero oito">8</a>
+                    <a onclick="clicou_9()" class="numero nove">9</a>
+                    <a onclick="clicou_0()" class="numero zero">0</a>
+                    <a onclick="clicou_00()" id="zerozero" class="numero zerozero">0 0</a>
                 </div>
                 <div class="operacoes">
-                    <a class="operacao">+</a>
-                    <a class="operacao">-</a>
-                    <a class="operacao">/</a>
-                    <a class="operacao">*</a>
-                    <a class="operacao">&#8730</a>
-                    <a class="operacao">x<sup>2</sup></a>
-                    <a onclick="clearScrean()" class="operacao">C</a>
-                    <a onclick="setResultValue()" id="igual" class="operacao">=</a>
+                    <a onclick="clicou_sum()" class="operacao">+</a>
+                    <a onclick="clicou_sub() " class="operacao">-</a>
+                    <a onclick="clicou_div()" class="operacao">/</a>
+                    <a onclick="clicou_mult()" class="operacao">*</a>
+                    <a onclick="" class="operacao">&#8730</a>
+                    <a onclick="" class="operacao">x<sup>2</sup></a>
+                    <a onclick="resetInputValue()" class="operacao">C</a>
+                    <a onclick="resultado()" class="operacao" id="igual">=</a>
                 </div>
             </div>
 
