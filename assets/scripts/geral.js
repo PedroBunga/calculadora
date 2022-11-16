@@ -1,85 +1,12 @@
+
 /*Estas Funções Servem para Capturar o Valor Presionado na Calculadora e concatenar ao Input existente 
   Isto se aplica tambem as operações*/
-function isEmpty() {
-
-  if (
-    document.getElementById("entrada").value === "Insere Os Valores" ||
-    document.getElementById("entrada").value === ""
-  ) {
-    return true;
+function getTecla (valor_da_tecla){
+  let tamanho_da_entrada =document.getElementById("entrada").value;
+  if (tamanho_da_entrada.length===31) {
+    return ;
   }
-  return false;
-}
-
-function clicou_1() {
-  if (document.getElementById("entrada") === isEmpty()) {
-    return (document.getElementById("entrada").value = "1");
-  }
-  return (document.getElementById("entrada").value += "1");
-}
-
-function clicou_2() {
-  if (document.getElementById("entrada").value === isEmpty()) {
-    return (document.getElementById("entrada").value = "2");
-  }
-  return (document.getElementById("entrada").value += "2");
-}
-
-function clicou_3() {
-  if (document.getElementById("entrada").value === isEmpty()) {
-    return (document.getElementById("entrada").value = "3");
-  }
-  return (document.getElementById("entrada").value += "3");
-}
-
-function clicou_4() {
-  if (document.getElementById("entrada").value === isEmpty()) {
-    return (document.getElementById("entrada").value = "4");
-  }
-  return (document.getElementById("entrada").value += "4");
-}
-function clicou_5() {
-  if (document.getElementById("entrada").value === isEmpty()) {
-    return (document.getElementById("entrada").value = "5");
-  }
-  return (document.getElementById("entrada").value += "5");
-}
-function clicou_6() {
-  if (document.getElementById("entrada").value === isEmpty()) {
-    return (document.getElementById("entrada").value = "6");
-  }
-  return (document.getElementById("entrada").value += "6");
-}
-function clicou_7() {
-  if (document.getElementById("entrada").value === isEmpty()) {
-    return (document.getElementById("entrada").value = "7");
-  }
-  return (document.getElementById("entrada").value += "7");
-}
-function clicou_8() {
-  if (document.getElementById("entrada").value === isEmpty()) {
-    return (document.getElementById("entrada").value = "8");
-  }
-  return (document.getElementById("entrada").value += "8");
-}
-function clicou_9() {
-  if (document.getElementById("entrada").value === isEmpty()) {
-    return (document.getElementById("entrada").value = "9");
-  }
-  return (document.getElementById("entrada").value += "9");
-}
-
-function clicou_0() {
-  if (document.getElementById("entrada").value === isEmpty()) {
-    return (document.getElementById("entrada").value = "0");
-  }
-  return (document.getElementById("entrada").value += "0");
-}
-function clicou_00() {
-  if (document.getElementById("entrada").value === isEmpty()) {
-    return (document.getElementById("entrada").value = "00");
-  }
-  return (document.getElementById("entrada").value += "00");
+  return (document.getElementById("entrada").value += `${valor_da_tecla}`);
 }
 /*Capturando as operações escolhidas*/
 function clicou_sum() {
@@ -99,7 +26,8 @@ function clicou_div() {
 /*Estas funções Servem para capturar a operação escolhida e concatenar ao input existente*/
 
 function resetInputValue() {
-  return (document.getElementById("entrada").value = "");
+  document.getElementById("entrada").placeholder = "Insere a Operação";
+  document.getElementById("entrada").value = "";
 }
 
 function whatOperation(expressao) {
@@ -123,20 +51,35 @@ function whatOperation(expressao) {
   return operatio;
 }
 
+/* Função que Calcula o Resultado Final */
 function resultado() {
   var resultado_Final = 0;
   let valo_Digitado = document.getElementById("entrada").value;
-  let valorAtual = valo_Digitado.split(`{whatOperation(valo_Digitado)}`);
+  let operacao =whatOperation(valo_Digitado);
+  let valorAtual = valo_Digitado.split(`${operacao}`);
 
-  if (whatOperation(valo_Digitado) === "+") {
+  if (operacao === "+") {
     resultado_Final = parseInt(valorAtual[0], 10) + parseInt(valorAtual[1], 10);
-    console.log(parseInt(valorAtual[0]) + parseInt(valorAtual[1]));
+  }else{
+    if (operacao === "*") {
+      resultado_Final = parseInt(valorAtual[0], 10)*parseInt(valorAtual[1], 10);
+    } else {
+      if (operacao === "/" && valorAtual[1]>0 ) {
+        resultado_Final = parseFloat(parseInt(valorAtual[0], 10)/parseInt(valorAtual[1], 10));
+      } else {
+        if (operacao === "-" && valorAtual[0]|valorAtual[1]>0 ) {
+          resultado_Final = parseFloat(parseInt(valorAtual[0], 10)-parseInt(valorAtual[1], 10));
+        } else {
+          
+        }
+      }
+    }
+  }
+  
+
+  if (document.getElementById("entrada").value ==="" || document.getElementById("entrada").value ===null) {
+    return (document.getElementById("entrada").placeholder = "Entrada Invalida!");
   }
 
-  if (isEmpty()) {
-    return (document.getElementById("entrada").value = "Entrada Invalida!");
-  }
-
-  return (document.getElementById("result").innerHTML =
-    parseInt(resultado_Final));
+  return document.getElementById("result").innerHTML = resultado_Final;
 }

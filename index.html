@@ -28,24 +28,24 @@
             <div class="calculadora-display">
                 <div class="resultado"><span id="result"></span></div>
                 <div class="entrada">
-                    <input value="Insere Os Valores" type="text" name="entrada" id="entrada">
+                    <input type="text" placeholder="Insere a Operação" name="entrada"  id="entrada" maxlength="31">
                 </div>
             </div>
 
             <div class="calculadora-main">
                 
                 <div  class="digitos">
-                    <a onclick="clicou_1()" class="numero um">1</a>
-                    <a onclick="clicou_2()" class="numero dois">2</a>
-                    <a onclick="clicou_3()" class="numero tres">3</a>
-                    <a onclick="clicou_4()" class="numero quatro">4</a>
-                    <a onclick="clicou_5()" class="numero cinco">5</a>
-                    <a onclick="clicou_6()" class="numero seis">6</a>
-                    <a onclick="clicou_7()" class="numero sete">7</a>
-                    <a onclick="clicou_8()" class="numero oito">8</a>
-                    <a onclick="clicou_9()" class="numero nove">9</a>
-                    <a onclick="clicou_0()" class="numero zero">0</a>
-                    <a onclick="clicou_00()" id="zerozero" class="numero zerozero">0 0</a>
+                    <a onclick="getTecla(1)" class="numero um">1</a>
+                    <a onclick="getTecla(2)" class="numero dois">2</a>
+                    <a onclick="getTecla(3)" class="numero tres">3</a>
+                    <a onclick="getTecla(4)" class="numero quatro">4</a>
+                    <a onclick="getTecla(5)" class="numero cinco">5</a>
+                    <a onclick="getTecla(6)" class="numero seis">6</a>
+                    <a onclick="getTecla(7)" class="numero sete">7</a>
+                    <a onclick="getTecla(8)" class="numero oito">8</a>
+                    <a onclick="getTecla(9)" class="numero nove">9</a>
+                    <a onclick="getTecla(0)" class="numero zero">0</a>
+                    <a onclick="getTecla(00)" id="zerozero" class="numero zerozero">0 0</a>
                 </div>
 
                 <div class="operacoes">
@@ -54,7 +54,7 @@
                     <a onclick="clicou_div()" class="operacao">/</a>
                     <a onclick="clicou_mult()" class="operacao">*</a>
                     <a onclick="" class="operacao">&#8730</a>
-                    <a onclick="" class="operacao">x<sup>2</sup></a>
+                    <a onclick="" class="operacao">x<sup>n</sup></a>
                     <a onclick="resetInputValue()" class="operacao">C</a>
                     <a onclick="resultado()" class="operacao" id="igual">=</a>
                 </div>
