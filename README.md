@@ -14,7 +14,7 @@ Este Projecto Tem como Objectivo implementar as operações basicas de uma calcu
 
 ### TUMB
 
-![Imagem do projecto](./assets/images/project/Capturar.JPG)
+![Imagem do projecto](./assets/images/project/Capturar.1.JPG)
 
 #### Para mais Informações acesse as Minhas Redes Sociais
 ![ [](https://m.facebook.com/people/Bangui-Bunga-Pedro/100077932472452/) ](./assets/icons/social%20media/facebook.png)
