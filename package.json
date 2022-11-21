@@ -1,0 +1,19 @@
+{
+  "name": "calculadora",
+  "version": "1.0.0",
+  "description": "Este Projecto Tem como Objectivo implementar as operações basicas de uma calculadora (Adição , Subtração, Multiplicação, Divisão,Potencia e Raiz Quadrada), Para uma calculadora versão web.",
+  "main": "index.html",
+  "scripts": {
+    "test": "index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroBunga/calculadora.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PedroBunga/calculadora/issues"
+  },
+  "homepage": "https://github.com/PedroBunga/calculadora#readme"
+}
