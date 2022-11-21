@@ -1,10 +1,10 @@
 {
   "name": "calculadora",
   "version": "1.0.0",
-  "description": "Este é um projecto de Calculadora que tem como objectivo realizar as operações basicas da Matematica ",
-  "main": "index.js",
+  "description": "Este é um projecto de Calculadora que tem como objectivo realizar as operações basicas da Matematica",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "index.html"
   },
   "repository": {
     "type": "git",

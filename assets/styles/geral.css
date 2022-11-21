@@ -33,15 +33,19 @@ body {
 }
 .informacao-inicial .botoes a{
   height: 40px;
-  border-radius: 5px;
+  border-radius: 7px;
   font-size: small;
   background-color:#7F18ED;
   text-align: center;
-  padding: 10px;
+  padding: 12px;
   font-weight: 800;
   font-size: 15px;
   cursor: pointer;
   transition: width 10s;
+}
+.informacao-inicial .botoes a:first-child:hover{
+  box-shadow: 1px -1px 100px 8px rgba(147,54,245,0.75);
+
 }
 
 /*Estilizando o Scrol Geral que aparecer na Pagina*/
@@ -94,7 +98,6 @@ body {
   /*Caso o numero de Caracter Superar o Tamanho do Container
     As palavras vão ser quebradas para proxima linha
   */
-
   flex-wrap: wrap;
   overflow-wrap: break-word;
   overflow-y: scroll;
