@@ -28,14 +28,14 @@ body {
   justify-content: center;
   color: rgb(237, 237, 237);
 }
-.informacao-inicial p{
+.informacao-inicial p {
   text-align: justify;
 }
-.informacao-inicial .botoes a{
+.informacao-inicial .botoes a {
   height: 40px;
   border-radius: 7px;
   font-size: small;
-  background-color:#7F18ED;
+  background-color: #7f18ed;
   text-align: center;
   padding: 12px;
   font-weight: 800;
@@ -43,15 +43,13 @@ body {
   cursor: pointer;
   transition: width 10s;
 }
-.informacao-inicial .botoes a:first-child:hover{
-  box-shadow: 1px -1px 100px 8px rgba(147,54,245,0.75);
-
+.informacao-inicial .botoes a:first-child:hover {
+  box-shadow: 1px -1px 100px 8px rgba(147, 54, 245, 0.75);
 }
 
 /*Estilizando o Scrol Geral que aparecer na Pagina*/
 ::-webkit-scrollbar {
   display: none;
- 
 }
 
 .main-content {
@@ -63,7 +61,7 @@ body {
   height: 512px;
   background-color: rgb(40, 42, 45);
   border-radius: 13px;
-  box-shadow: 1px -1px 400px 18px rgba(147,54,245,0.75);
+  box-shadow: 1px -1px 400px 18px rgba(147, 54, 245, 0.75);
 }
 
 .main-content .calculadora {
@@ -73,7 +71,6 @@ body {
   flex-direction: column;
   width: 360px;
   height: 492px;
-
 }
 
 .main-content .calculadora .calculadora-display {
@@ -118,7 +115,7 @@ body {
   outline: none;
   text-align: end;
   background-color: rgb(30, 31, 34);
-  color:rgb(237, 237, 237);
+  color: rgb(237, 237, 237);
   font-size: large;
   font-weight: 900;
   cursor: text;
@@ -153,7 +150,6 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-left: 2px;
   border-radius: 7px;
   font-weight: 900;
-  
 }
 
 .main-content .calculadora .calculadora-main .digitos a {
@@ -197,7 +193,6 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-content: center;
 }
 
-
 .main-content .calculadora .calculadora-main .operacoes a {
   display: flex;
   align-items: center;
@@ -218,3 +213,36 @@ input[type="number"]::-webkit-outer-spin-button {
   text-align: center;
 }
 
+@media (max-width: 390px), (max-width: 600px), {
+  .calculadora {
+    padding: 10px;
+  }
+  body {
+    width: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .informacao-inicial {
+    width: 320px;
+  }
+  .informacao-inicial p {
+    text-align: start;
+  }
+  .main-content {
+    width: 320px;
+  }
+  .main-content .calculadora .calculadora-main .operacoes {
+    width: 35%;
+  }
+  .main-content .calculadora .calculadora-main .digitos .numero {
+    width: 40px;
+  }
+  .main-content .calculadora .calculadora-main .digitos #zerozero {
+    width: 90px;
+  }
+}
+@media (max-width: 390px){
+  
+} 
